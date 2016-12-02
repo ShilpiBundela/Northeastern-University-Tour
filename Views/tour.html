@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="../JS/navbar.js" type="text/javascript"></script>
+	<script src="../JS/footer.js" type="text/javascript"></script>
+	<script src="../JS/floatingNav.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="../CSS/Navbar.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/tour.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="floating-nav" style="display: none;">
+		<ul id="floating-nav"></ul>
+	</div>
+	<div id="navbar" class="project-navbar"></div>
+	<br>
+	<br>
+	<div id="main0" onclick="runTour('Full Tour')">
+		<span class="tag-name" href="#">FULL TOUR</span>
+	</div>
+	<br>
+	<div id="main1">
+		<span class="tag-name" href="#">AUTOMATED TOURS</span>
+	</div>
+	<br>
+	<div id="main2" onclick="checkCookie()">
+		<span class="tag-name" href="#">CUSTOM TOUR</span>
+	</div>
+	<br>
+	<div id="content">
+		<div id="div4">
+			<span class="tag-name" href="#">SELECT YOUR TOUR ROUTE</span>
+			<br>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider" name="check" />
+					<label for="checkboxSlider"></label>
+				</div>
+				<div class="slideName">
+					Curry Center
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider1" name="check" />
+					<label for="checkboxSlider1"></label>
+				</div>
+				<div class="slideName">
+					Snell Engineering
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider2" name="check" />
+					<label for="checkboxSlider2"></label>
+				</div>
+				<div class="slideName">
+					Snell Library
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider3" name="check" />
+					<label for="checkboxSlider3"></label>
+				</div>
+				<div class="slideName">
+					Marino Center
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider4" name="check" />
+					<label for="checkboxSlider4"></label>
+				</div>
+				<div class="slideName">
+					West Village
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider5" name="check" />
+					<label for="checkboxSlider5"></label>
+				</div>
+				<div class="slideName">
+					Cabot Cage
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider6" name="check" />
+					<label for="checkboxSlider6"></label>
+				</div>
+				<div class="slideName">
+					Ryder Hall
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider7" name="check" />
+					<label for="checkboxSlider7"></label>
+				</div>
+				<div class="slideName">
+					Shillman Hall
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider8" name="check" />
+					<label for="checkboxSlider8"></label>
+				</div>
+				<div class="slideName">
+					Stearns Centre
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider9" name="check" />
+					<label for="checkboxSlider9"></label>
+				</div>
+				<div class="slideName">
+					Dana Research Center
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider10" name="check" />
+					<label for="checkboxSlider10"></label>
+				</div>
+				<div class="slideName">
+					Gainsborough parking Garage
+				</div>
+			</div>
+			<div class="customizeOptions">
+				<div class="checkboxSlider">
+					<input type="checkbox" value="None" id="checkboxSlider11" name="check" />
+					<label for="checkboxSlider11"></label>
+				</div>
+				<div class="slideName">
+					YMCA
+				</div>
+			</div>
+			<br>
+      <button name="Start Tour" onclick="runTour('Custom Tour')">Start Tour</button>
+		</div>
+		<div id="div1" onclick="runTour('Dorm Tour')">
+			<span class="tag-name" href="#">DORM BUILDINGS TOUR</span>
+		</div>
+		<br>
+		<div id="div2" onclick="runTour('Rec Tour')">
+			<span class="tag-name" href="#">RECREATIONAL BUILDINGS TOUR</span>
+		</div>
+		<br>
+		<div id="div3" onclick="runTour('Office Tour')">
+			<span class="tag-name" href="#">OFFICE BUILDINGS TOUR</span>
+		</div>
+	</div>
+	<br>
+	<div id="footer" class="footer"></div>
+
+	<script>
+		$(document).ready(function() {
+
+			$("#main1").click(function() {
+				$("#div4").fadeOut("fast", function() {
+					$("#div1").fadeIn();
+					$("#div2").fadeIn("slow");
+					$("#div3").fadeIn(1000);
+				});
+			});
+
+			$("#main2").click(function() {
+				$("#div3").fadeOut(200);
+				$("#div2").fadeOut(500);
+				$("#div1").fadeOut(800, function() {
+					$("#div4").fadeIn(800);
+				});
+			});
+		});
+	</script>
+	<script type="text/javascript" src="../JS/checkCookie.js"></script>
+  <script type="text/javascript" src="../JS/runTour.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAX6fT6D2E0_y9uwva5LFmIb1qMsO_1Ing"></script>
+	<script type="text/javascript" src="../JS/navigate.js"></script>
+</body>
+
+</html>
