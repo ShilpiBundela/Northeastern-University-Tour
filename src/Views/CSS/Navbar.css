@@ -1,0 +1,128 @@
+/*Navbar and navbar components*/
+.project-navbar {
+  position: relative;
+  font-family: sans-serif;
+	padding-top: 5px;
+	background-color: #CC0000;
+  overflow: hidden;
+  z-index: 10;
+}
+.navbar-logo {
+  display: inline;
+  float: left;
+}
+.navbar-logo img{
+  height: 50px;
+  width: 70px;
+}
+.project-navbar ul {
+  padding-top: 17.5px;
+}
+.project-navbar li {
+  display: inline;
+  font-size: 15px;
+	list-style-type: none;
+	text-decoration: none;
+}
+.project-navbar a {
+  padding: 15px;
+	text-decoration: none;
+	color: white;
+  outline: 0;
+}
+.project-navbar.right {
+  display: inline;
+  float: right;
+}
+.project-navbar.left {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+}
+.project-navbar a:hover {
+	background-color: white;
+	color: #000;
+}
+/*floating Nav and its components*/
+
+.floating-nav {
+  display: inline;
+}
+.floating-nav #floating-nav {
+  position: relative;
+  z-index: 1000;
+}
+#floating-nav, #floating-nav ul {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#floating-nav li {
+  float: left;
+  margin-left: 10px;
+}
+#floating-nav li ul {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 1000;
+  width: 300px;
+  left: -999em;
+}
+#floating-nav li:hover ul {
+  left: auto;
+}
+#floating-nav li i {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 1);
+  padding: 10px;
+}
+#floating-nav a {
+  display: block;
+  padding: 5px;
+  width: 10em;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+/*footer and footer components*/
+.footer {
+  z-index: 1000;
+  clear: both;
+  color: white;
+  font-size: 12px;
+  font-family: sans-serif;
+	padding-top: 5px;
+	background-color: #CC0000;
+  padding: 10px;
+  overflow: hidden;
+}
+.footer li {
+  display: inline;
+	list-style-type: none;
+	text-decoration: none;
+}
+.footer a,.footer .copyright {
+  padding: 8px;
+  color: white;
+	text-decoration: none;
+  outline: 0;
+}
+.footer .media-links {
+  float: left;
+  display: inline;
+}
+.footer .copyright {
+  float: right;
+  display: inline;
+}
+
+@@media print {
+  #navbar, #footer{
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}
